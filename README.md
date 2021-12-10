@@ -1,3 +1,12 @@
+ # Tugas Bahasa Pemrograman
+ <p> Nama   :   Viena Dwi Puytri Maulina <p>
+ <p> Nim    :   312110469
+ <p> Kelas  :   TI.21.C1 <p>
+
+ ## Latihan 1
+
+ ![gambar 1](ss/3.png)
+ 
  ```python
  kontak={'Ari': '081267888', 'Dina': '087677776'}
 print("=======================")
