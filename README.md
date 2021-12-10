@@ -68,11 +68,14 @@ while True:
     c = input("\nA)dd, E)dit, S)earch, D)elete L)ist, Q)uit: ")
 
 ```
-<p> 1. Menu ADD (menambahkan data)<p>
+<p> kemudian muncul menu pilihan seperti ini <p>
+
+![gambar 4](ss/a.png)
+## Menu ADD (menambahkan data)
 <p> berikut program nya <p>
 
 ```python
-  ## MENU ADD
+
     if (c.lower() == 'a'):
         print("\n=========================")
         print("| TAMBAH DATA MAHASISWA |")
@@ -86,5 +89,118 @@ while True:
         dataMahasiswa[nama] = nim, nilaiTugas, nilaiUts, nilaiUas, nilaiAkhir
         print("\nData Berhasil Ditambahkan!")
 
+```
+
+<p> kemudian run, ketik huruf a. maka kita bisa menambahkan data. kemudian isi nama, nim, dan nilai nilainya.<p>
+<p> berikut hasil run <p>
+
+![gambar 5](ss/b.png)
+<p> untuk mengecek data bisa ketik l seperti ini <p>
+
+![gambar 6](ss/c.png)
+
+
+## Menu EDIT (untuk mengubah data)
+<p> berikut program nya <p>
+
+```python
+elif (c.lower() == 'e'):
+        print("\n=======================")
+        print("| EDIT DATA MAHASISWA |")
+        print("=======================")
+        nama = input("Masukkan Nama: ")
+        if nama in dataMahasiswa.keys():
+            nim           = input("Masukkan NIM Baru         : ")
+            nilaiTugas    = int(input("Masukkan Nilai Tugas Baru : "))
+            nilaiUts      = int(input("Masukkan Nilai UTS Baru   : "))
+            nilaiUas      = int(input("Masukkan Nilai UAS Baru   : "))
+            nilaiAkhir    = (0.30 * nilaiTugas) + (0.35 * nilaiUts) + (0.35 * nilaiUas)
+            dataMahasiswa[nama] = nim, nilaiTugas, nilaiUts, nilaiUas, nilaiAkhir
+            print("\nData Berhasil Di Update!")
+        else:
+            print("Data tidak ditemukan!")
+```
+
+<p> kemudian ubah data yang datanya sudah diinputkan seperti ini <p>
+
+![gambar 7](ss/d.png)
+
+## Menu SEARCH (untuk mencari data)
+<p> berikut program nya <p>
+
+```python
+  elif (c.lower() == 's'):
+        print("\n=======================")
+        print("| CARI DATA MAHASISWA |")
+        print("=======================")
+        nama = input("Masukan Nama:  ")
+        if nama in dataMahasiswa.keys():
+            print("\n                   DAFTAR NILAI MAHASISWA                   ")
+            print("==============================================================")
+            print("|     Nama     |    NIM    | Tugas |  UTS  |  UAS  |  Akhir |")
+            print("==============================================================")
+            print("| {0:12s} | {1:9s} | {2:5} | {3:5} | {4:5} | {5:6} |".format(nama, nim, nilaiTugas, nilaiUts, nilaiUas, nilaiAkhir))
+            print("==============================================================")
+        else:
+            print("Datanya {0} Tidak Ada ".format(nama))
+```
+<p> kamudian ketik nama yang ingin dicari datanya seperti ini <p>
+
+![gambar 8](ss/e.png)
+
+## Menu DELETE (Menghapus data)
+<p> berikut program nya <p>
+
+```python
+  elif (c.lower() == 'd'):
+        nama = input("Masukkan Nama:  ")
+        if nama in dataMahasiswa.keys():
+            del dataMahasiswa[nama]
+            print("Data Telah dihapus!")
+        else:
+            print("Data Mahasiswa Tidak Ada".format(nama))
+```
+<p> kemudian ketik nama yang data nya akan diapus, seperti ini <p>
+
+![gambar 9](ss/f.png)
+
+## Menu list (melihat data)
+<p> berikut programnya <p>
+
+```python
+    elif (c.lower() == 'l'):
+        if dataMahasiswa.items():
+            print("\n                      DAFTAR NILAI MAHASISWA                    ")
+            print("==================================================================")
+            print("| No |     Nama     |    NIM    | Tugas |  UTS  |  UAS  |  Akhir |")
+            print("==================================================================")
+            i = 0
+            for x in dataMahasiswa.items():
+                i += 1
+                print("| {6:2} | {0:12s} | {1:9s} | {2:5} | {3:5} | {4:5} | {5:6} |".format(x[0], x[1][0], x[1][1], x[1][2], x[1][3], x[1][4], i))
+            print("==================================================================")
+        else:
+            print("\n                      DAFTAR NILAI MAHASISWA                    ")
+            print("==================================================================")
+            print("| No |     Nama     |    NIM    | Tugas |  UTS  |  UAS  |  Akhir |")
+            print("==================================================================")
+            print("|                          TIDAK ADA DATA!                       |")
+            print("==================================================================")
+```
+
+<p> untuk melihat data ketik l , seperti berikut <p>
+
+![gambar](ss/c.png)
+
+## Menu Quit (mengkhiri program)
+<p> berikut programnya <p>
+
+```python
+  elif (c.lower() == 'q'):
+        print("\n Viena Dwi Putri Maulina \n 312110469 \n TI.21.C1")
+        break
+
+    else:
+        print("Pilih menu yang tersedia: ")
 ```
 
