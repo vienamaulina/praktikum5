@@ -190,7 +190,7 @@ elif (c.lower() == 'e'):
 
 <p> untuk melihat data ketik l , seperti berikut <p>
 
-![gambar](ss/c.png)
+![gambar 10](ss/c.png)
 
 ## Menu Quit (mengkhiri program)
 <p> berikut programnya <p>
@@ -204,3 +204,4 @@ elif (c.lower() == 'e'):
         print("Pilih menu yang tersedia: ")
 ```
 
+![gambar 11](ss/g.png)
